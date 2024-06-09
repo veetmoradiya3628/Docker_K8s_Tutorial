@@ -1,0 +1,23 @@
+Docker commands for frequent access:
+
+RabbitMQ
+docker run -d --hostname my-rabbit --name some-rabbit -p 8080:15672 -e RABBITMQ_DEFAULT_USER=username -e RABBITMQ_DEFAULT_PASS=password rabbitmq:3-management
+
+Redis
+Docker run --name redis -p 6379:6379 redis
+docker exec -it rdb redis-cli
+
+===
+
+minikube 
+
+
+minikube start --driver=virtualbox --no-vtx-check
+minikube start --driver=docker
+minikube start --driver=hyperv
+
+minikube delete
+
+minikube status
+
+minikube dashboard
